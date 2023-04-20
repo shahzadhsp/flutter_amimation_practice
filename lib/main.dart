@@ -2,6 +2,25 @@ import 'package:flutter/material.dart';
 
 const owlUrl =
     'https://raw.githubusercontent.com/flutter/website/master/src/images/owl.jpg';
+void main() {
+  runApp(
+    const MyApp(),
+  );
+}
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: FadeInDemo(),
+        ),
+      ),
+    );
+  }
+}
 
 class FadeInDemo extends StatefulWidget {
   const FadeInDemo({Key? key}) : super(key: key);
@@ -32,7 +51,7 @@ class _FadeInDemoState extends State<FadeInDemo> {
         child: Column(
           children: const [
             Text('Type: Owl'),
-            Text('Age: 39'),
+            Text('Age: 29'),
             Text('Employment: None'),
           ],
         ),
@@ -41,23 +60,6 @@ class _FadeInDemoState extends State<FadeInDemo> {
   }
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: FadeInDemo(),
-        ),
-      ),
-    );
-  }
-}
 
-void main() {
-  runApp(
-    const MyApp(),
-  );
-}
+
